@@ -1,0 +1,89 @@
+1. Get all contacts from the server and displaying them - done
+2. Posting a new contact - done
+3. Deleting an existing contact - done
+4. Searching for a contact - 
+5. Editing a contact - 
+6. Stylization
+
+//If we find a contact I want to display it as a child of the section element and have an edit button where the user can edit it - done 
+
+//I want to make a router which would display '/contacts' - Contacts component and '/' - Home component - done
+
+31/10/2023 
+- style the Home.js component and error handling (edge cases) - done on both pages
+. the input fields should be a a little lower  - done
+. h2 should be with the same font as the h1 - done
+. I should make the buttons look better - I can watch a youtube video or use bootstrap buttons if I find such
+. add the arrow icon below the h2 - done
+
+
+
+- style the Contacts.js component with an image  - done
+01/11/2023
+- adjust the contacts heading position - done
+- have no more than 8 elements on the list I have to manipulate the useState() and save the contacts there - done
+- add next and previous page buttons - done
+- make the functionality for them - done
+
+remaining things:
+. make the website fully responsive
+. if we store more contacts and they tend to go below the picture on the right, to have page <1>, <2> and so on... - done
+
+I have an error when editing a contact - I see the message invalid data format when it shouldn't be displayed - fixed
+
+//previous button has to be pressed twice so that it displays the proper contacts - fixed
+
+//making the site fully responsive -
+. style the navbar
+. make the navbar fully responsive (I am having issues with Samsung Galaxy Fold interface)  
+//better looking buttons - done
+
+.there is a problem with the navbar in the home.js component but I don't have the same problem on the contact.js page
+
+we will update the stateOfTheAsc like I have done already 
+and we will have a const [sortedAsc, setSortedAsc] = useState(false) and once the button is clicked it will re-render the page and check if it is true, it will sort them out
+
+{isSorted ? (
+  ascendingContacts.map(contact => (
+    // Display the sorted contacts here
+  ))
+) : (
+  contacts.map(contact => (
+    // Display the unsorted contacts here
+  ))
+)}
+
+it will be this way
+
+next/previous doesn't work properly
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+we have a problem because when I sort the contacts next page functionality doesn't work
+
+what we can do is check in the getAllContacts if the contacts should sorted ascending or descending
+

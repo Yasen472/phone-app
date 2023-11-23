@@ -1,0 +1,7 @@
+. make the sorting button green on each width - done
+. make each of the first media queries fully responsive starting from mobile
+. in the end when I reach 1200px width - fix the spacing between the image and contacts section
+
+ !!! FOR PORTRAIT TABLETS REMOVE THE IMAGE 
+ !!! FOR MOBILE DEVICES REMOVE THE IMAGE 
+ 

@@ -1,0 +1,2 @@
+1. After delete button clicked, the list element should be removed from the section without re-rendering the page and using the function getAllContacts - done
+2. Error handling, edge cases, checking if we receive actual phone numbers or not - 

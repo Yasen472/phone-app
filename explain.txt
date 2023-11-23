@@ -1,0 +1,26 @@
+backendUrl - the main address which is for the data that we will be using and adding to and will be stored on the server
+
+contactName and contactNumber are using useState('') because initially they will be empty strings
+handleContactChange is a function which accepts an event (event) => {setContact(value of the changed contact)}
+setContact is invoked only when a change of the state happens which means that it is called once the value has changed 
+and is different than empty string '' as it was initially
+same goes for contactNumber and handleContactChange
+
+we have a function called getAllContacts which will be requesting all the contacts we have on the server 
+and after that it will parse it to JSON format and it will call setContacts which will after that console.log the data we 
+receive from the server.
+
+//IDEAS
+. I will make a file which will contain these functions which operate with the data from the server e.g. getAllContact
+  and I will import them in the App.js file so that I can use them 
+  I will also make a function within the app.js file which will make list items and display all the data that we have
+  from the server for each contact\
+
+. I will try to see if I can upload a new contact from Postman.
+
+//TODO
+I have to fix the post functionality because I can't post new contacts now since I am getting an error 400 every time I try to post a new one on the server - it has to be in json format
+
+. when we want to update a resource partially - we use a patch request 
+. =PUT request replaces the entire resource, patch specifies only the changes
+

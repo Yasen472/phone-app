@@ -1,0 +1,21 @@
+Contact.js file code breakdown
+
+Next functionality
+we have a function attached to the Next text on the webpage which is called displayNextContacts 
+displayNextContacts - changes the endIndex which causes the component to re-render and getAllContacts is invoked again
+
+what does getAllContacts do?
+first it invokes clearAllContacts to clear the existing contacts on the page
+after that it sends a GET request to the backend url
+it checks if isSortedAsc == true 
+=> it justs sorts the data which was fetched and gets the first results so that they can be displayed on the page
+
+there is a problem with the endIndex as I can see
+when next is clicked 
+the useEffect gets called which is on the endIndex change, NOT THE getAllContacts function !!!
+
+I will make a different variable which will hold the state of ALL CONTACTS so that we don't have to 
+make a get request every time and it will be different than the contacts state which we are currently using to store only the FIRST SEVEN contacts
+
+I think we should change the endIndex as it is 91 when we call the next functionality
+
