@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../navbar/navbar.js';
-import axios, { all } from 'axios';
+import axios from 'axios';
 import { LiaEditSolid } from 'react-icons/lia';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import contactsImg from '../../images/new.png';
@@ -24,8 +24,9 @@ function Contacts() {
   }, []);
 
   useEffect(() => {
-    setContacts(allContacts.slice(startIndex, endIndex))
-  }, [startIndex, endIndex])
+    setContacts(allContacts.slice(startIndex, endIndex)); //changed this line from slice to splice
+    // setAllContacts(contacts);
+  }, [startIndex, endIndex]) //setContacts is invoked when either the startIndex or endIndex changes
 
   function clearAllContacts() {
     setContacts([]);
@@ -42,7 +43,7 @@ function Contacts() {
 
         const allContacts = response.data.data;
         setAllContacts(allContacts);
-        const dataToDisplay = allContacts.slice(startIndex, endIndex);
+        const dataToDisplay = allContacts.splice(startIndex, endIndex); //changed this line from slice to splice
         setContacts(dataToDisplay);
       })
       .catch(error => {
@@ -87,13 +88,19 @@ function Contacts() {
   }
 
   function displayNextContacts(e) {
-    if (endIndex === allContacts.length - 1) {
-      e.preventDefault()
+    
+    debugger;
+
+    // let endElement = contacts[contacts.length - 1].contactName;
+    // let endContactFromServer = allContacts[allContacts.length - 1].contactName;
+
+    if (endIndex === allContacts.length - 1) { // || endElement === endContactFromServer
+      e.preventDefault();
       return;
     }
     if (endIndex + 7 > allContacts.length) {
       setStartIndex(allContacts.length - endIndex);
-      setEndIndex(allContacts.length - 1);
+      setEndIndex(startIndex + 7); // allContacts.length - 1
       return;
     }
 
@@ -132,7 +139,7 @@ function Contacts() {
     const sortedDesc = allContacts.slice().sort((a, b) => b.contactName.localeCompare(a.contactName));
     setAllContacts(sortedDesc);
     setStartIndex(0);
-    setEndIndex(7); //here we set the EndIndex to be zero
+    setEndIndex(7); 
     setContacts(sortedDesc.slice(endIndex - 7, endIndex));
     setSelectedOption('Z-A');
   }
@@ -145,8 +152,8 @@ function Contacts() {
   return (
     <>
       <Navbar />
-      <body>
         <main className='main-contacts'>
+
           <div className="contacts-container">
             <div className='header-container'>
 
@@ -162,7 +169,8 @@ function Contacts() {
                     </div>
                   </div>
                 </div>
-                {/* Render your content based on the selected option */}
+
+
                 <div className='content'>
                   {selectedOption === 'A-Z'}
                   {selectedOption === 'Z-A'}
@@ -212,17 +220,13 @@ function Contacts() {
 
           </  div>
 
-          <div className='img-container'>
             <img className='img-contacts' src={contactsImg} alt="Contacts" />
-          </div>
+            
         </  main >
-      </body>
+
     </  >
   )
 
 }
-
-//I would like to have a dropdown menu called Sort which will have the two options and will be aligned somewhere next to the Contacts List heading
-
 
 export default Contacts;

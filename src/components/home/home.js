@@ -74,7 +74,7 @@ function Home() {
 
   return (
     <>
-    <body>
+
       <main className='main-home'>
         <img className='img-phone' src={phoneIcon} />
         <div className="contacts">
@@ -112,7 +112,7 @@ function Home() {
 
         </div>
       </main>
-      </body>
+
     </>
   );
 }

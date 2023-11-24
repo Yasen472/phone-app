@@ -1,4 +1,4 @@
-body {
+.main-contacts {
     background-color: #e8ebe9;
     overflow: hidden;
 }
@@ -11,7 +11,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: calc(100vh - 80px);
     }
 
     .img-contacts {
@@ -25,10 +25,10 @@ body {
     }
 
     .contacts-container {
-        padding: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 15px;
     }
 
     .contacts-heading {
@@ -45,12 +45,10 @@ body {
         align-items: center;
         margin-top: 1rem;
         font-size: 1.5rem;
-        line-height: 1;
     }
 
     .icons {
-        vertical-align: sub;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .header-container {
@@ -71,8 +69,16 @@ body {
         border-radius: 10px;
     }
 
+    .contact-item > div > button {
+        height: 1.8rem;
+        width: 3.5rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+    }
+
     .sorting-container {
-        display: flex;
         position: relative;
         display: inline-block;
         flex-direction: column;
@@ -80,17 +86,17 @@ body {
         align-items: center;
     }
 
-    .pages-container>a {
+    .pages-container > a {
+        display: inline-block;
         justify-content: space-between;
         text-decoration: none;
-        display: inline-block;
-        padding: 8px 16px;
+        padding: 4px 24px;
         margin-right: 6px;
-        font-size: 10px;
+        font-size: 1rem;
         text-align: center;
     }
 
-    .pages-container>a:hover {
+    .pages-container > a:hover {
         background-color: black;
         color: white;
     }
@@ -125,15 +131,17 @@ body {
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 160px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         z-index: 1;
+        width: fit-content;
+        /* Set the width to fit the content */
     }
 
     .dropdown-content span {
-        padding: 12px 16px;
-        display: block;
+        padding: 12px;
+        display: inline-block;
         cursor: pointer;
+        white-space: nowrap;
     }
 
     .dropdown:hover .dropdown-content {
@@ -167,9 +175,6 @@ body {
 
 }
 
-/*ready */
-
-/* Extra small devices (phones, 600px and down) */
 @media screen and (min-width: 381px) and (max-width: 600px) {
 
     .main-contacts {
@@ -179,7 +184,7 @@ body {
         margin: auto;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: calc(100vh - 80px);
     }
 
     .img-contacts {
@@ -250,17 +255,17 @@ body {
         align-items: center;
     }
 
-    .pages-container>a {
+    .pages-container > a {
+        display: inline-block;
         justify-content: space-between;
         text-decoration: none;
-        display: inline-block;
-        padding: 8px 16px;
+        padding: 4px 24px;
         margin-right: 6px;
-        font-size: 10px;
+        font-size: 1rem;
         text-align: center;
     }
 
-    .pages-container>a:hover {
+    .pages-container > a:hover {
         background-color: black;
         color: white;
     }
@@ -274,31 +279,35 @@ body {
     .round {
         font-size: 10px;
         border-radius: 10px;
-        /* Adjust the border-radius for a more rectangular shape */
         height: 1.6rem;
         width: 10px;
         margin: auto;
     }
-
     .dropdown {
         display: inline-block;
+
+        position: relative;
     }
 
     .dropbtn {
         padding: 5px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         border: none;
         cursor: pointer;
         background-color: green;
     }
 
     .dropdown-content {
+
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 160px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         z-index: 1;
+        width: auto;
+        min-width: 100%;
+        box-sizing: border-box;
+        white-space: nowrap;
     }
 
     .dropdown-content span {
@@ -309,6 +318,8 @@ body {
 
     .dropdown:hover .dropdown-content {
         display: block;
+        
+        width: auto;
     }
 
     .contact-item {
@@ -336,9 +347,6 @@ body {
 
 }
 
-/*ready */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
 
     .main-contacts {
@@ -346,7 +354,7 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: calc(100vh - 80px);
     }
 
     .img-contacts {
@@ -411,17 +419,17 @@ body {
         align-items: center;
     }
 
-    .pages-container>a {
+    .pages-container > a {
+        display: inline-block;
         justify-content: space-between;
         text-decoration: none;
-        display: inline-block;
-        padding: 8px 16px;
+        padding: 4px 24px;
         margin-right: 6px;
-        font-size: 10px;
+        font-size: 1rem;
         text-align: center;
     }
 
-    .pages-container>a:hover {
+    .pages-container > a:hover {
         background-color: black;
         color: white;
     }
@@ -497,31 +505,23 @@ body {
 
 }
 
-/*ready */
-
-/*EVERYTHING ABOVE IS GOOD I HAVE TO FIX EVERYTHING BELOW */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
     .main-contacts {
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        margin: auto;
+        height: calc(100vh - 80px);
     }
 
     .img-contacts {
-        margin-top: 3rem;
-        width: 100%;
+        max-width: 100%;
     }
 
     .contacts-container {
-        padding: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50vw;
         margin-left: 2rem;
     }
 
@@ -535,23 +535,12 @@ body {
     .allContactsSection {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5px;
+        margin-top: 10px;
         font-size: 1.7rem;
-        line-height: 1;
     }
 
     .icons {
-        vertical-align: sub;
         font-size: 1.8rem;
-    }
-
-    .header-container {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 20px;
     }
 
     .editedContactName,
@@ -568,21 +557,20 @@ body {
     .sorting-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 
-    .pages-container>a {
+    .pages-container > a {
+        display: inline-block;
         justify-content: space-between;
         text-decoration: none;
-        display: inline-block;
-        padding: 8px 16px;
+        padding: 4px 24px;
         margin-right: 6px;
-        font-size: 10px;
+        font-size: 1rem;
         text-align: center;
     }
 
-    .pages-container>a:hover {
+    .pages-container > a:hover {
         background-color: black;
         color: white;
     }
@@ -602,31 +590,33 @@ body {
     }
 
     .dropdown {
+        position: relative;
         display: inline-block;
     }
 
     .dropbtn {
         padding: 5px;
-        font-size: 1.1rem;
+        font-size: 1rem;
         border: none;
         cursor: pointer;
         background-color: green;
-
     }
 
     .dropdown-content {
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 160px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         z-index: 1;
+        width: fit-content;
+        /* Set the width to fit the content */
     }
 
     .dropdown-content span {
-        padding: 12px 16px;
-        display: block;
+        padding: 12px;
+        display: inline-block;
         cursor: pointer;
+        white-space: nowrap;
     }
 
     .dropdown:hover .dropdown-content {
@@ -647,9 +637,11 @@ body {
         align-items: center;
     }
 
+
     .contact-name {
         margin-right: 10px;
     }
+
 
     .contact-actions {
         display: flex;
@@ -657,21 +649,20 @@ body {
     }
 
 }
-/* I have problems with the Surface Pro and the Ipad Air devices */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 
     .main-contacts {
         display: flex;
         flex-direction: row;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
-        /* height: 100%; */
+        height: calc(100vh - 80px);
         /* margin: auto; */
     }
 
     .img-contacts {
-        margin-top: 3rem;
+        margin-top: 2rem;
         /* width: 100%; */
     }
 
@@ -680,7 +671,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* width: 50vw; */
+        padding: 8vw;
         margin-left: 2rem;
     }
 
@@ -731,17 +722,17 @@ body {
         align-items: center;
     }
 
-    .pages-container>a {
+    .pages-container > a {
+        display: inline-block;
         justify-content: space-between;
         text-decoration: none;
-        display: inline-block;
-        padding: 8px 16px;
+        padding: 4px 24px;
         margin-right: 6px;
-        font-size: 10px;
+        font-size: 1rem;
         text-align: center;
     }
 
-    .pages-container>a:hover {
+    .pages-container > a:hover {
         background-color: black;
         color: white;
     }
@@ -759,33 +750,34 @@ body {
         width: 10px;
         margin: auto;
     }
-
     .dropdown {
+        position: relative;
         display: inline-block;
     }
 
     .dropbtn {
         padding: 5px;
-        font-size: 1.1rem;
+        font-size: 1rem;
         border: none;
         cursor: pointer;
         background-color: green;
-
     }
 
     .dropdown-content {
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 160px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         z-index: 1;
+        width: fit-content;
+        /* Set the width to fit the content */
     }
 
     .dropdown-content span {
-        padding: 12px 16px;
-        display: block;
+        padding: 12px;
+        display: inline-block;
         cursor: pointer;
+        white-space: nowrap;
     }
 
     .dropdown:hover .dropdown-content {
@@ -817,16 +809,14 @@ body {
 
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
     .main-contacts {
         display: flex;
         flex-direction: row;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
-        /* height: 100%; */
-        /* margin: auto; */
+        height: calc(100vh - 80px);
     }
 
     .img-contacts {
@@ -883,11 +873,12 @@ body {
     }
 
     .pages-container > a {
+        display: inline-block;
         justify-content: space-between;
         text-decoration: none;
-        padding: 8px 16px;
+        padding: 4px 24px;
         margin-right: 6px;
-        font-size: 10px;
+        font-size: 1rem;
         text-align: center;
     }
 
@@ -907,28 +898,33 @@ body {
         border-radius: 10px;
         height: 1.6rem;
         width: 10px;
+        margin: auto;
     }
-
     .dropdown {
         display: inline-block;
+
+        position: relative;
     }
 
     .dropbtn {
         padding: 5px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         border: none;
         cursor: pointer;
         background-color: green;
-
     }
 
     .dropdown-content {
+
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 160px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         z-index: 1;
+        width: auto;
+        min-width: 100%;
+        box-sizing: border-box;
+        white-space: nowrap;
     }
 
     .dropdown-content span {
@@ -939,6 +935,8 @@ body {
 
     .dropdown:hover .dropdown-content {
         display: block;
+        
+        width: auto;
     }
 
     .contact-item {

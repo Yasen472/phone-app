@@ -1,0 +1,17 @@
+{
+    "count": 13,
+    "data": [
+        {
+            "_id": "656070f450b1e44a6d689c15",
+            "contactName": "Pecata",
+            "contactPhoneNumber": "0876858483",
+            "__v": 0
+        },
+        {
+            "_id": "6561088b684b6d126650bc40",
+            "contactName": "Ciko",
+            "contactPhoneNumber": "0893456787",
+            "__v": 0
+        }
+    ]
+}

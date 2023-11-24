@@ -87,3 +87,8 @@ we have a problem because when I sort the contacts next page functionality doesn
 
 what we can do is check in the getAllContacts if the contacts should sorted ascending or descending
 
+.to change the arrows on each device 
+.add some space between the sort button and content below and above it for S8+ device and for the Surface Pro 7
+.some margin-left for the contacts section for the ipad minin device
+
+
