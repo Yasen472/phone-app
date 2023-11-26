@@ -91,4 +91,7 @@ what we can do is check in the getAllContacts if the contacts should sorted asce
 .add some space between the sort button and content below and above it for S8+ device and for the Surface Pro 7
 .some margin-left for the contacts section for the ipad minin device
 
+.add some spacing between the phone number and the buttons 
+. fix the Next functionality
+
 

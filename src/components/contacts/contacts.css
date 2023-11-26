@@ -821,7 +821,6 @@
 
     .img-contacts {
         margin-top: 3rem;
-        /* width: 100%; */
     }
 
     .contacts-container {
@@ -900,6 +899,7 @@
         width: 10px;
         margin: auto;
     }
+
     .dropdown {
         display: inline-block;
 
@@ -907,11 +907,12 @@
     }
 
     .dropbtn {
-        padding: 5px;
+        padding: 4px 12px;
         font-size: 1.2rem;
         border: none;
         cursor: pointer;
         background-color: green;
+        border-radius: 8px;
     }
 
     .dropdown-content {
@@ -935,10 +936,16 @@
 
     .dropdown:hover .dropdown-content {
         display: block;
-        
         width: auto;
     }
 
+    .dropdown:hover {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
     .contact-item {
         display: flex;
         align-items: center;

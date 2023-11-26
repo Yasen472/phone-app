@@ -25,7 +25,7 @@ function Contacts() {
 
   useEffect(() => {
     setContacts(allContacts.slice(startIndex, endIndex)); //changed this line from slice to splice
-    // setAllContacts(contacts);
+    
   }, [startIndex, endIndex]) //setContacts is invoked when either the startIndex or endIndex changes
 
   function clearAllContacts() {
@@ -43,7 +43,7 @@ function Contacts() {
 
         const allContacts = response.data.data;
         setAllContacts(allContacts);
-        const dataToDisplay = allContacts.splice(startIndex, endIndex); //changed this line from slice to splice
+        const dataToDisplay = allContacts.slice(startIndex, endIndex); //changed this line from slice to splice
         setContacts(dataToDisplay);
       })
       .catch(error => {
@@ -88,19 +88,15 @@ function Contacts() {
   }
 
   function displayNextContacts(e) {
-    
-    debugger;
 
-    // let endElement = contacts[contacts.length - 1].contactName;
-    // let endContactFromServer = allContacts[allContacts.length - 1].contactName;
-
-    if (endIndex === allContacts.length - 1) { // || endElement === endContactFromServer
-      e.preventDefault();
+    if (endIndex === allContacts.length - 1) { //if only one element is left
+      setStartIndex(allContacts.length - 1);
+      setEndIndex(allContacts.length);
       return;
     }
     if (endIndex + 7 > allContacts.length) {
-      setStartIndex(allContacts.length - endIndex);
-      setEndIndex(startIndex + 7); // allContacts.length - 1
+      setStartIndex(allContacts.length - (allContacts.length - endIndex));
+      setEndIndex(allContacts.length);
       return;
     }
 
@@ -109,6 +105,9 @@ function Contacts() {
   }
 
   function displayPreviousContacts(e) {
+
+    debugger;
+
     if (endIndex === 7) {
       e.preventDefault();
       return;
@@ -121,7 +120,7 @@ function Contacts() {
     }
 
     setStartIndex(startIndex - 7)
-    setEndIndex(endIndex - 7);
+    setEndIndex(startIndex); //before I changed it, it was endIndex - 7
   }
 
 
