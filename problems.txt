@@ -1,4 +1,1 @@
-Problems that I have:
-
-next and previous functionality don't work as expected when the contacts are sorted
-previous and next don't stop working when there is no data to be displayed which is an issue
+css is broken for pc devices for the save button when editing a contact
