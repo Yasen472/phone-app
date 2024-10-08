@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+  background-color: #e8ebe9;
+}
+
+.main-home {
+  overflow-y: auto;
+}
+
+
+@media only screen and (max-width: 300px) {
+
+  .main-home {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    margin-top: 2.5rem;
+  }
+
+
+  .img-phone {
+    height: 25vh;
+    width: 48vw;
+    margin-bottom: 1rem;
+  }
+
+  .dialer-heading {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    margin: 0 1rem;
+  }
+
+  .inputs-container>input {
+    display: flex;
+    height: 1.5rem;
+    padding: 7px;
+    width: 9rem;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+
+  .down-arrow {
+    font-size: 2.5rem;
+  }
+
+  .btn.btn-primary {
+    height: 1.5rem;
+    width: 4rem;
+    margin-top: 0.7rem;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+  }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (min-width: 281px) and (max-width: 600px) {
+
+  .main-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+  }
+
+
+  .img-phone {
+    height: 20vh;
+    margin-bottom: 1.5rem;
+  }
+
+  .dialer-heading {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    margin: 0 1rem;
+  }
+
+  .inputs-container > input {
+    display: flex;
+    height: 1.5rem;
+    padding: 7px;
+    width: 9rem;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+
+  .down-arrow {
+    font-size: 2.5rem;
+  }
+
+  .btn.btn-primary {
+    background-color: black;
+    color: white;
+    height: 1.5rem;
+    width: 4rem;
+    margin-top: 0.7rem;
+    border-radius: 10px;
+  }
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .main-home {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+  }
+
+  .img-phone {
+    display: flex;
+    height: 27rem;
+    margin-top: 3rem;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+
+  .dialer-heading {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .inputs-container>input {
+    display: flex;
+    height: 2rem;
+    width: 12.5rem;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .down-arrow {
+    margin-top: 10px;
+    font-size: 2.5rem;
+  }
+
+  .btn.btn-primary {
+    height: 2rem;
+    width: 4.375rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  .main-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+  }
+
+  .img-phone {
+    height: 27rem;
+    margin-top: 3.5rem;
+    margin-left: 1rem;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+
+  .dialer-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .inputs-container>input {
+    display: flex;
+    height: 2rem;
+    width: 12.5rem;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .down-arrow {
+    margin-top: 10px;
+    font-size: 2.5rem;
+  }
+
+  .btn.btn-primary {
+    height: 2rem;
+    width: 4.375rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  .main-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+  }
+
+  .img-phone {
+    height: 24rem;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    padding: 1rem;
+  }
+
+  .dialer-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .inputs-container>input {
+    display: flex;
+    height: 2rem;
+    width: 12.5rem;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .down-arrow {
+    margin-top: 10px;
+    font-size: 2.5rem;
+  }
+
+  .btn.btn-primary {
+    height: 2rem;
+    width: 4.375rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  .main-home {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+  }
+
+  .img-phone {
+    margin-top: 3rem;
+    height: 25rem;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .dialer-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .inputs-container>input {
+    display: flex;
+    height: 2rem;
+    width: 12.5rem;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .down-arrow {
+    margin-top: 10px;
+    font-size: 2.5rem;
+  }
+
+  .btn.btn-primary {
+    height: 1.875rem;
+    width: 4.375rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+  }
+
+}
